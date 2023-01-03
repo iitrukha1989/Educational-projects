@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Sound Server</title>
+</head>
+
+<body>
+    {% if args["method"] == "POST" %}
+    <h1>Файл успешно загружен.</h1>
+    {% endif %}
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <p></p>
+        <h2>S21_School</h2>
+        <p><input type="file" name="file" multiple accept="audio/mp3, audio/ogg audio/wav">
+            <input type="submit" value="Загрузить">
+        </p>
+    </form>
+    <ul>
+        {% for file in stream_entries %}
+        <li>{{file['name']}}</li>
+        <audio controls>
+            <source src="http://localhost:8888/files/{{file}}" type="audio/mpeg">
+        </audio>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>

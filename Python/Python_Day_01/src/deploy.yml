@@ -1,0 +1,30 @@
+server:
+    install_packages:
+    - python3
+    - nginx
+    exploit_files:
+    - exploit.py
+    - consumer.py
+bad_guys: '[4815162342, 3133780085]'
+hosts: all
+task:
+-   name: Install python3
+    apt:
+        pkg: python3
+        state: latest
+-   name: Install nginx
+    apt:
+        pkg: nginx
+        state: latest
+-   name: Copy exploit.py
+    copy:
+        SourceFolder: fake_path/exploit.py
+        TargetFolder: fake_path/exploit.py
+-   name: Copy consumer.py
+    copy:
+        SourceFolder: fake_path/consumer.py
+        TargetFolder: fake_path/consumer.py
+-   name: Run exploit.py
+    command: python3 exploit.py
+-   name: Run consumer.py
+    command: python3 consumer.py -e 4815162342, 3133780085
