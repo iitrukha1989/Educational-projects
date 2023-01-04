@@ -1,0 +1,156 @@
+\input texinfo
+@settitle S21_SmartCalc 2.0
+
+@titlepage
+@title This manual is a short guide to using the calculator. 
+
+@page
+@vskip 0pt plus 1fill
+@insertcopying
+@end titlepage
+
+@ifnottex
+@node Top
+@top S21_SmartCalc 2.0
+Developer: aedie (Ilya Trukhanovich)
+@end ifnottex
+
+@menu
+* Common info:: This section provides common information on the principle of operation of this calculator and its capabilities.
+* Arithmetic operators:: This section provides common information about the list of implemented arithmetic operations
+* Functions:: This section provides common information about the list of implemented mathematical functions.
+* Charts:: This section provides common information about the possibility of plotting functions.
+* Credit calculator:: This section provides common information about the possibility of a credit calculator.
+* Deposit calculator:: This section provides common information about the possibility of a deposit calculator.
+@end menu
+
+@node Common info
+@chapter Common info
+
+The calculator is developed in the C/C++ programming language using the QT GUI version 6.3.1
+The calculator is implemented based on the Dijkstra algorithm, the general essence of which is to convert mathematical expressions (including functions) from infix to reverse Polish notation.
+Additionally, the calculator has a graph rendering function, as well as a credit and deposit calculator
+
+@node Arithmetic operators
+@chapter Arithmetic operators
+
+The calculator implements nine arithmetic operators
+@enumerate
+@item
+Left and right brackets - (a + b)
+@item
+Addition - a + b
+@item
+Subtraction - a - b
+@item
+Multiplication - a * b
+@item
+Division - a / b
+@item
+Power - a ^ b
+@item
+Modulus - a mod b
+@item
+Unary plus - +a
+@item
+Unary minus - -a
+@end enumerate
+
+@node Functions
+@chapter Functions
+
+The calculator implements nine arithmetic functions
+@enumerate
+@item
+Computes cosine - cos(x)
+@item
+Computes sine - sin(x)
+@item
+Computes tangent - tan(x)
+@item
+Computes arc cosine - acos(x)
+@item
+Computes arc sine - asin(x)
+@item
+Computes arc tangent - atan(x)
+@item
+Computes square root - sqrt(x)
+@item
+Computes natural logarithm - ln(x)
+@item
+Computes common logarithm - log(x)
+@end enumerate
+
+@node Charts
+@chapter Charts
+
+The calculator implements the possibility of plotting functions: arithmetic, mathematical and their combinations.
+
+In order to build a graph, it is necessary that the variable "X" is present in the expression. By pressing the "equal" button, an additional field will automatically open in which the graph is being plotted
+
+The information field of plotting contains the following fields:
+
+@table @asis
+@item value
+The "value" field contains an expression previously seen in the calculator by which the function graph will be generated.
+@item Begin point
+The area of the graph definition is the starting point
+@item End point
+The area of the graph definition is the end point
+@end table
+
+@node Credit calculator
+@chapter Credit calculator
+
+The calculator has a special mode of operation: Credit Calculator
+
+The information field of the credit calculator contains the following fields:
+
+@table @asis
+@item Type credit
+The type credit field determines by what principle/algorithms the credit will be calculated, namely its monthly payment, the amount of overpayment, as well as the total amount of the loan
+@item Credit amount
+The amount taken from the bank at a certain percentage
+@item Interest rate
+The amount indicated as a percentage that the recipient of the loan pays for using it
+@item Credit period
+The period of time from the moment of disbursement of funds to the full fulfillment of obligations to the bank.
+@end table
+
+@table @asis
+@item Upon entering the above values, the following parameters will be calculated and clicking the "calculate" button will be calculated:
+@item The monthly payment
+@item The overpayment of the credit
+@item Total amount 
+@end table
+
+@node Deposit calculator
+@chapter Deposit calculator
+
+The calculator has a special mode of operation: Deposit Calculator
+
+The information field of the deposit calculator contains the following fields:
+
+@table @asis
+@item Type deposit
+The type deposit field determines by what principle/algorithms the deposit will be calculated, namely its monthly payment, the tax amount, as well as the total amount of the deposit
+@item Deposit amount
+The money or securities deposited to a credit institution for safekeeping or for a special purpose.
+@item Interest rate
+The paid by banks to customers for the use of money placed on the deposit account.@item credit period
+@item Tax interest rate
+This is the amount of tax per unit per unit of monetary income
+@item Deposit period
+The period during which the funds are held by the bank, as well as the period during which the bank pays interest on certain conditions
+@item Supplement and remove
+Possibility of partial replenishment or withdrawal of funds
+@end table
+
+@table @asis
+@item Upon entering the above values, the following parameters will be calculated and clicking the "calculate" button will be calculated:
+@item The accuredinterest
+@item The tax amount
+@item Total amount 
+@end table
+
+@bye

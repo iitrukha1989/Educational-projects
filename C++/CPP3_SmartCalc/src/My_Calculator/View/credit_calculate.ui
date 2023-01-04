@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Credit_calculate</class>
+ <widget class="QDialog" name="Credit_calculate">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>657</width>
+    <height>290</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: black;</string>
+  </property>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>2</x>
+     <y>4</y>
+     <width>327</width>
+     <height>280</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-radius: 10px;
+background: white;</string>
+   </property>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>25</y>
+      <width>291</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	color: black
+}</string>
+    </property>
+    <property name="text">
+     <string>Credit calculate</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>8</x>
+      <y>73</y>
+      <width>120</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	color: black
+}</string>
+    </property>
+    <property name="text">
+     <string>Type payment</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>8</x>
+      <y>127</y>
+      <width>120</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	color: black
+}</string>
+    </property>
+    <property name="text">
+     <string>Credit amount, rub</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>8</x>
+      <y>177</y>
+      <width>120</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	color: black
+}</string>
+    </property>
+    <property name="text">
+     <string>Credit period, year</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>8</x>
+      <y>227</y>
+      <width>120</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	color: black
+}</string>
+    </property>
+    <property name="text">
+     <string>Interest rate, %</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="type_payment">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>71</y>
+      <width>150</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox {
+  background-color: rgb(215, 215, 215);
+  color: black;
+  border: 1px solid black;
+}</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>Annuity payment</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Differentiated payment</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLineEdit" name="Credit_amount">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>125</y>
+      <width>150</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 1px solid black;
+color: black</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="Credit_period">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>175</y>
+      <width>150</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 1px solid black;
+color: black</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="Interest_rate">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>225</y>
+      <width>150</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 1px solid black;
+color: black</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="widget_2" native="true">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>4</y>
+     <width>325</width>
+     <height>280</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-radius: 10px;
+background: white;</string>
+   </property>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>71</y>
+      <width>110</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+  background-color: rgb(255, 250, 250);
+  color: black; 
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+}</string>
+    </property>
+    <property name="text">
+     <string>Calculate</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>11</x>
+      <y>127</y>
+      <width>141</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	color: black
+}</string>
+    </property>
+    <property name="text">
+     <string>Monthly payment, rub</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>11</x>
+      <y>177</y>
+      <width>141</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	color: black
+}</string>
+    </property>
+    <property name="text">
+     <string>Overpayment loan, rub</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>12</x>
+      <y>227</y>
+      <width>141</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	color: black
+}</string>
+    </property>
+    <property name="text">
+     <string>Total payment, rub</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Monthly_payment">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>127</y>
+      <width>150</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	color: black
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Overpayment_on_the_loan">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>177</y>
+      <width>140</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	color: black
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Total_payment">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>227</y>
+      <width>140</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	color: black
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_12">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>25</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	color: black
+}</string>
+    </property>
+    <property name="text">
+     <string>Result</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
